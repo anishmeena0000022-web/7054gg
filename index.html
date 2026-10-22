@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishav Book — Earn ₹23,500–45,000 Monthly from Home</title>
+  <meta name="description" content="India's most trusted handwriting work platform. Get materials delivered to your doorstep, complete the work, and earn guaranteed income.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base variables */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #faf7f2;
+      --text: #2c2523;
+      --text-muted: #736b66;
+      --primary: #eb5a28;
+      --primary-dark: #b83d16;
+      --primary-shadow: rgba(235, 90, 40, 0.45);
+      --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem;
+      position: relative;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Animated Ambient Glow Blobs */
+    .blob-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.6;
+      will-change: transform;
+      animation: drift 14s ease-in-out infinite alternate;
+    }
+
+    .blob-1 {
+      top: -10%;
+      left: 15%;
+      width: 460px;
+      height: 460px;
+      background: radial-gradient(circle, #ffd4b8 0%, rgba(255, 212, 184, 0) 70%);
+      animation-duration: 16s;
+    }
+
+    .blob-2 {
+      bottom: -15%;
+      right: 10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #e2ebd4 0%, rgba(226, 235, 212, 0) 70%);
+      animation-duration: 20s;
+      animation-delay: -5s;
+    }
+
+    .blob-3 {
+      top: 35%;
+      right: -10%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, #fedac2 0%, rgba(254, 218, 194, 0) 70%);
+      animation-duration: 18s;
+      animation-delay: -9s;
+    }
+
+    @keyframes drift {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, -30px) scale(1.08); }
+      100% { transform: translate(-30px, 40px) scale(0.95); }
+    }
+
+    /* Main Frosted Glass Panel */
+    .glass-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 640px;
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(28px) saturate(160%);
+      -webkit-backdrop-filter: blur(28px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 36px;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 
+        0 30px 70px -20px rgba(120, 72, 20, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    @media (max-width: 640px) {
+      .glass-card {
+        padding: 2.25rem 1.25rem;
+        border-radius: 28px;
+      }
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      padding: 0.45rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      box-shadow: 0 4px 16px -6px rgba(120, 72, 20, 0.12);
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(235, 90, 40, 0.55);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 0 7px rgba(235, 90, 40, 0);
+        transform: scale(1.15);
+      }
+    }
+
+    /* Typography */
+    .headline {
+      font-family: var(--font-display);
+      font-size: 2.45rem;
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-top: 1.5rem;
+      color: var(--text);
+    }
+
+    @media (max-width: 640px) {
+      .headline {
+        font-size: 1.95rem;
+      }
+    }
+
+    .headline .highlight {
+      color: var(--primary);
+      background: linear-gradient(135deg, #f2622d 0%, #db4a18 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 1rem auto 0;
+      max-width: 480px;
+    }
+
+    /* Floating Photo with Glass Frame & Light Sheen */
+    .photo-wrapper {
+      margin: 2rem auto 0;
+      width: 240px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @media (max-width: 640px) {
+      .photo-wrapper {
+        width: 210px;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .photo-frame {
+      position: relative;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 28px;
+      padding: 6px;
+      overflow: hidden;
+      box-shadow: 
+        0 20px 40px -14px rgba(120, 72, 20, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .photo-frame img {
+      display: block;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    @media (max-width: 640px) {
+      .photo-frame img {
+        height: 210px;
+      }
+    }
+
+    .photo-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        115deg,
+        transparent 32%,
+        rgba(255, 255, 255, 0.45) 48%,
+        transparent 64%
+      );
+      transform: translateX(-130%);
+      animation: sheen 5s ease-in-out 1s infinite;
+    }
+
+    @keyframes sheen {
+      0%, 45% { transform: translateX(-130%); }
+      100% { transform: translateX(130%); }
+    }
+
+    /* Action Buttons */
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      margin-top: 2.25rem;
+    }
+
+    @media (min-width: 520px) {
+      .cta-group {
+        flex-direction: row;
+      }
+    }
+
+    /* 3D Animated Primary Button */
+    .btn-3d {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 1rem 1.85rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      background: linear-gradient(160deg, #f26632 0%, #d84514 100%);
+      border-radius: 18px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 
+        0 6px 0 0 var(--primary-dark),
+        0 14px 28px -6px var(--primary-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
+      transform: translateY(0);
+      transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .btn-3d:hover {
+      transform: translateY(-3px);
+      box-shadow: 
+        0 9px 0 0 var(--primary-dark),
+        0 18px 34px -6px rgba(235, 90, 40, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+
+    .btn-3d:active {
+      transform: translateY(4px);
+      box-shadow: 
+        0 2px 0 0 var(--primary-dark),
+        0 6px 14px -4px var(--primary-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-3d::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        115deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.4) 48%,
+        transparent 65%
+      );
+      transform: translateX(-130%);
+      animation: sheen 5s ease-in-out infinite;
+    }
+
+    .btn-3d svg {
+      transition: transform 0.25s ease;
+    }
+
+    .btn-3d:hover svg {
+      transform: translate(2px, -2px);
+    }
+
+    /* Glass Secondary Button */
+    .btn-glass {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 1.75rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 18px;
+      box-shadow: 
+        0 8px 20px -8px rgba(120, 72, 20, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+      transition: all 0.2s ease;
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.75);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -8px rgba(120, 72, 20, 0.2);
+    }
+
+    .btn-glass:active {
+      transform: translateY(0);
+    }
+
+    /* Stats Grid with Glass Pills */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 540px) {
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      box-shadow: 
+        0 6px 18px -8px rgba(120, 72, 20, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .stat-pill strong {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .stat-pill .icon {
+      display: inline-flex;
+      color: var(--primary);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blob, .live-dot, .photo-wrapper, .photo-frame::after, .btn-3d::after {
+        animation: none;
+      }
+      .btn-3d {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow Background -->
+  <div class="blob-container" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Main Glassmorphic Card -->
+  <main class="glass-card">
+    <!-- Live Badge -->
+    <div class="badge">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span>Vishav Book Publication</span>
+    </div>
+
+    <!-- Earnings Headline -->
+    <h1 class="headline">
+      Earn <span class="highlight">₹23,500–45,000</span> Monthly from Home
+    </h1>
+
+    <!-- Description -->
+    <p class="subtitle">
+      India's most trusted handwriting work platform. Get materials delivered to your doorstep, complete the work, and earn guaranteed income.
+    </p>
+
+    <!-- Floating Photo with Glass Frame -->
+    <div class="photo-wrapper">
+      <div class="photo-frame">
+        <img 
+          src="https://joyful-landing-maker-49.lovable.app/assets/girl-writing-4FmO7UID.jpg" 
+          alt="Girl writing by hand in a notebook for handwriting project" 
+          width="480" 
+          height="480"
+          loading="eager"
+        />
+      </div>
+    </div>
+
+    <!-- 3D Animated CTA & Secondary Action -->
+    <div class="cta-group">
+      <a href="https://t.me/+3eA2Ksoeq5UxZGI1" target="_blank" rel="noopener noreferrer" class="btn-3d">
+        <!-- Paper plane icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/>
+          <path d="m21.854 2.147-10.94 10.939"/>
+        </svg>
+        <span>Join Telegram Channel</span>
+        <!-- Arrow up-right -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 7h10v10"/>
+          <path d="M7 17 17 7"/>
+        </svg>
+      </a>
+
+      <a href="https://t.me/+3eA2Ksoeq5UxZGI1" target="_blank" rel="noopener noreferrer" class="btn-glass">
+        View Plans
+      </a>
+    </div>
+
+    <!-- Trust Stats -->
+    <div class="stats-grid">
+      <!-- Active Members -->
+      <div class="stat-pill">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </span>
+        <span><strong>1000+</strong> Active Members</span>
+      </div>
+
+      <!-- Total Paid -->
+      <div class="stat-pill">
+        <span class="icon" style="font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1;">
+          ₹
+        </span>
+        <span><strong>₹50L+</strong> Total Paid</span>
+      </div>
+
+      <!-- Rating -->
+      <div class="stat-pill">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </span>
+        <span><strong>4.9</strong> Rating</span>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
